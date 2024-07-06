@@ -10,7 +10,7 @@ if Success then
   if Success then
     print("Parser/true")
     load(Parser)()
-    print(tostring(math.floor((os.clock()-StartTime)*1000)).."/true")
+    print(tostring((os.clock()-StartTime)*1000).."/true")
   else
     print("Parser/false")
   end
