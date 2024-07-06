@@ -1,0 +1,17 @@
+local Handle = io.popen("curl -s https://raw.githubusercontent.com/xqzzvv/UIO/main/Executor")
+Executor = Handle:read("*a")
+local Success = Handle:close()
+if Success then
+  print("Executor/true")
+  Executor = load(Executor)()
+  Handle = io.popen("curl -s https://raw.githubusercontent.com/xqzzvv/UIO/main/Parser")
+  local Parser = Handle:read("*a")
+  Success = Handle:close()
+  if Success then
+    print("Parser/true")
+  else
+    print("Parser/false")
+  end
+else
+  print("Executor/false")
+end
