@@ -1,0 +1,14 @@
+UIO = {
+  Runtime = {
+    Variables = {
+      
+    }
+  },
+  Executor = {
+    
+  }
+}
+function UIO.Executor.Variable(ExecutorInput)
+  local Action = ExecutorInput[2]["Action"]
+end
+return UIO
